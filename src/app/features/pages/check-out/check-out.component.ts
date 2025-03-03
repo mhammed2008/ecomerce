@@ -32,9 +32,9 @@ export class CheckOutComponent implements OnInit {
     this.cartId = this.router.snapshot.paramMap.get('cartId')!;
   }
   checkOutForm: FormGroup = new FormGroup({
-    city: new FormControl('dfs', [Validators.required]),
-    phone: new FormControl('01204270588', [Validators.required,Validators.pattern('01(2|0|5)[0-9]{8,8}')]),
-    details: new FormControl('jkljkl', [Validators.required,Validators.minLength(5)]),
+    city: new FormControl('', [Validators.required]),
+    phone: new FormControl('', [Validators.required,Validators.pattern('01(2|0|5)[0-9]{8,8}')]),
+    details: new FormControl('', [Validators.required,Validators.minLength(5)]),
   });
 
   checkOut(submitType: string ) {
