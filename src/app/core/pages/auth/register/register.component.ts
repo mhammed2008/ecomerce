@@ -18,11 +18,11 @@ import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 export class RegisterComponent {
   error!: string;
   registerForm: FormGroup = new FormGroup({
-    name: new FormControl("null", Validators.required),
-    email: new FormControl('mohammed@gmail.com', [Validators.required,Validators.email]),
-    password: new FormControl('Password', [Validators.required, Validators.pattern('(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}')]),
-    rePassword: new FormControl('Password', Validators.required),
-      phone: new FormControl('01204270949', [Validators.required,Validators.pattern('01(2|0|5)[0-9]{8,8}')]),
+    name: new FormControl("", Validators.required),
+    email: new FormControl('', [Validators.required,Validators.email]),
+    password: new FormControl('', [Validators.required, Validators.pattern('(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}')]),
+    rePassword: new FormControl('', Validators.required),
+      phone: new FormControl('', [Validators.required,Validators.pattern('01(2|0|5)[0-9]{8,8}')]),
   }, this.validateRePassword);
 
   private _authService=inject(AuthService);
