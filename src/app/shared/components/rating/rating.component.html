@@ -1,0 +1,15 @@
+<div class="flex flex-row text-yellow-500 items-center text-sm">
+  @let r = rating;
+  @for (item  of ratings ; track item) {
+    @let remain =+r.toString().split('.')[1];
+    @if (r >= item) {
+      <i class="fa-solid fa-star"></i>
+    }
+    @else if (remain > 0 && r > item - 1){
+      <i class="fa-regular fa-star-half-stroke"></i>
+    } @else {
+      <i class="fa-regular fa-star-sharp"></i>
+    }
+  }
+  <p class="ml-2 text-gray-800">({{ r }})</p>
+</div>

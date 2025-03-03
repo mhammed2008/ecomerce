@@ -1,0 +1,40 @@
+<div class="product-card  p-4 w-full   group relative">
+  <figure class="w-full relative overflow-hidden">
+    <img [src]="product.imageCover" class="w-full h-60 object-cover"  [alt]="'image for '+product.title">
+    <img [src]="product.images[0].includes('https')?product.images[0]:'https://ecommerce.routemisr.com/Route-Academy-products/'+ product.images[0] "  alt="second image" class="absolute top-0 left-0 right-0 translate-x-[100%] group-hover:translate-x-0 transition-all duration-500">
+    <ul class=" absolute top-16 z-10 flex flex-col gap-y-8 opacity-0 group-hover:top-12 group-hover:gap-y-5 group-hover:opacity-100 transition-all duration-500 ease-in-out  ">
+      <li >
+        <button #load  (click)="addToCart(product.id , load  )"  class="group/button bg-white shadow-lg w-fit py-1.5  px-2 rounded-full hover:bg-primary hover:text-white transition-all duration-300">
+          <i  class="fa-regular fa-cart-plus group-disabled/button:hidden"></i>
+          <i  class="fa-solid fa-spinner-scale fa-spin hidden group-disabled/button:block "></i>
+        </button>
+      </li>
+      <li>
+        <button (click)="Dialog(product._id)" class="bg-white shadow-lg w-fit py-1.5  px-2 rounded-full hover:bg-primary hover:text-white transition-all duration-300"><i class="fa-light fa-magnifying-glass"></i></button>
+      </li>
+      <li>
+        <button #loadWishBtn (click)="productIsInsideWishList? RemoveFromWishList(product.id , loadWishBtn) :addProductToWishList(product.id , loadWishBtn)"
+                [class]="productIsInsideWishList?'hover:!bg-white hover:!text-black !bg-primary text-white':''"
+                class="bg-white shadow-lg group/wishList w-fit py-1.5  px-2 rounded-full hover:bg-primary hover:text-white transition-all duration-300"
+        >
+          <i class="fa-light fa-heart group-disabled/wishList:hidden"></i>
+          <i class="fa-solid fa-spinner-scale fa-spin group-disabled/wishList:block hidden "></i>
+        </button>
+      </li>
+    </ul>
+  </figure>
+  <div class="head">
+    <a [routerLink]="['/product' , product.id]" class="text-lg font-medium mb-2 hover:text-primary transition-all duration-300">{{product.title.split(' ').slice(0,2).join(' ')}}</a>
+    <p class="text-primary font-semibold mb-2">{{ product.price | currency: 'EGP' }}</p>
+
+    <app-rating [rating]="product.ratingsAverage"/>
+  </div>
+  @if (xMerck){
+    <button #closeBtn class="absolute top-3 right-3 z-10 group/close" (click)="RemoveFromWishList(product.id, closeBtn)">
+      <i class="fa-solid fa-xmark-large group-disabled/close:hidden"></i>
+      <i  class="fa-solid fa-spinner-scale fa-spin hidden group-disabled/close:block "></i>
+    </button>
+  }
+
+</div>
+

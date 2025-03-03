@@ -1,0 +1,104 @@
+<form [formGroup]="registerForm" (ngSubmit)="register(submit)" class="max-w-md mx-auto shadow-2xl  space-y-4 p-6 rounded-md my-16">
+  <h1 class="text-2xl font-semibold">Register</h1>
+
+  <div class="">
+    @let name = registerForm.controls['name'] ;
+    <div class="relative">
+      <input type="text" id="name" formControlName="name" name="name"
+             class="input border-1 peer"
+             placeholder=" "
+             [class]="name.errors && name.touched ? '!border-red-600 ' : ''"/>
+      <label for="name"
+             class="floatingLabel"
+      >Name</label>
+
+    </div>
+
+
+    @if (name.errors && name.touched){
+      <p class="text-red-600 mt-2 pl-2"> this filed is required</p>
+    }
+
+  </div>
+
+  <div class="">
+    @let email = registerForm.controls['email'] ;
+    <div class="relative">
+      <input type="email" id="email" formControlName="email" name="email"
+             class="input border-1 peer"
+             placeholder=" " [class]="email.errors && email.touched ? '!border-red-600 ' : ''" />
+      <label for="email"
+             class="floatingLabel">Email</label>
+    </div>
+
+
+    @if (email.errors && email.touched){
+      <p class="text-red-600 mt-2 pl-2">{{email.errors['email'] ? 'the Email is invalid' : 'this filed is required' }}</p>
+    }
+  </div>
+
+  <div class="">
+    @let password = registerForm.controls['password'] ;
+    <div class="relative">
+      <input type="password" id="password" formControlName="password" name="password"
+             class="input border-1 peer"
+             placeholder=" "
+             [class]="password.errors && password.touched ? '!border-red-600 ' : ''"/>
+      <label for="password"
+             class="floatingLabel"
+      >Password</label>
+
+    </div>
+
+
+    @if (password.errors && password.touched){
+      <p class="text-red-600 mt-2 pl-2">{{ password.errors['pattern'] ? 'Password must contain at least eight characters, an uppercase letter, and special characters.' : 'this filed is required' }}</p>
+    }
+
+  </div>
+
+  <div class="">
+    @let rePassword = registerForm.controls['rePassword'] ;
+    <div class="relative">
+      <input type="password" id="rePassword" formControlName="rePassword" name="rePassword"
+             class="input border-1 peer"
+             placeholder=" " [class]="rePassword.errors && rePassword.touched ? '!border-red-600 ' : ''" />
+      <label for="rePassword"
+             class="floatingLabel">rePassword</label>
+    </div>
+
+
+    @if (rePassword.errors && rePassword.touched || registerForm.errors){
+      <p class="text-red-600 mt-2 pl-2">{{ registerForm.errors ? 'The rePassword must equal the password.' : 'this filed is required' }}</p>
+    }
+  </div>
+
+  <div class="">
+    @let phone = registerForm.controls['phone'] ;
+    <div class="relative">
+      <input type="tel" id="phone" formControlName="phone" name="phone"
+             class="input border-1 peer"
+             placeholder=" " [class]="phone.errors && phone.touched ? '!border-red-600 ' : ''" />
+      <label for="phone"
+             class="floatingLabel">Phone</label>
+    </div>
+
+
+    @if (phone.errors && phone.touched){
+      <p class="text-red-600 mt-2 pl-2">{{phone.errors['pattern'] ? 'phone number is not valid' : 'this filed is required' }}</p>
+    }
+  </div>
+  @if (error){
+    <p class="text-red-600 mt-2 pl-2">{{error}} try to <a routerLink="/auth/login" class="font-medium"> Log in</a></p>
+  }
+
+
+  <button #submit type="submit" class="btn group mb-4"><span class="group-disabled:hidden">Register</span> <i class="fa-solid fa-spin fa-loader group-disabled:block hidden"></i></button>
+
+  <div class="inline-flex items-center justify-center w-full">
+    <hr class="w-64 h-px my-4 bg-gray-200 border-0 dark:bg-gray-700">
+    <span class="absolute px-3 font-medium text-gray-600 -translate-x-1/2 bg-white left-1/2 dark:text-white dark:bg-gray-900">OR</span>
+  </div>
+
+  <p class="text-center text-gray-600">Already have an account? <a routerLink="/auth/login" class="font-medium"> Log in</a></p>
+</form>

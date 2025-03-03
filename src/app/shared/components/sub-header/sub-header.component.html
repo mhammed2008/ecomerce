@@ -1,0 +1,14 @@
+<header class="flex justify-between px-4 md:px-20 py-14 bg-gray-300/50 mb-6 ">
+  <h2 class="text-3xl font-medium sm:text-4xl ">{{ title }}</h2>
+
+  <div class="flex items-center gap-2 text-gray-700">
+    <a routerLink="/home" class="text-gray-900">Home</a>
+    @if (!title.toLocaleLowerCase().includes('wish')){
+      <span> <i class="fa-regular fa-angle-right"></i> </span>
+      <a  disabled="">product</a>
+    }
+    <span> <i class="fa-regular fa-angle-right"></i> </span>
+    <a  disabled="">{{ title }}</a>
+
+  </div>
+</header>

@@ -1,0 +1,29 @@
+<div class="relative flex">
+
+  <div
+    [ngClass]="{
+    'bg-white w-[300px] absolute -left-full z-50  top-0 shadow-xl transition-all duration-500 p-4':true,
+    '!left-0': showFilter
+    }"
+
+  >
+
+      <h3 class="text-xl mb-4 font-medium">Select product brand</h3>
+      <ul class="space-y-4 h-[100vh] overflow-auto py-8">
+        @for ( brand of brands ; track $index) {
+          <li class="text-hover">
+            <input class="mr-4" type="checkbox" (click)="choseByBrand(brand._id)"  [name]="brand.slug" [id]="brand.slug">
+            <label [for]="brand.slug">{{brand.name}}</label>
+          </li>
+        }
+      </ul>
+      <button class="absolute right-2  text-3xl top-4" (click)="showFilter=false"><i class="fa-solid fa-xmark"></i></button>
+
+
+  </div>
+  <button class="absolute top-16 left-12 text-3xl sm:top-4 z- " (click)="showFilter=true"><i class="fa-solid fa-filter"></i></button>
+  <div class="overflow-hidden mx-auto">
+    <app-products-for-loop [products]="products"/>
+  </div>
+</div>
+

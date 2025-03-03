@@ -1,0 +1,9 @@
+.linkStyle{
+  --fa-primary-color: #FF324D;
+  --fa-secondary-color: #ffffff;
+
+  &:hover  {
+    --fa-secondary-color: #FF324D;
+    opacity: 1;
+  }
+}

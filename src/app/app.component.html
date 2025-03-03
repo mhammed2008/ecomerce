@@ -1,0 +1,14 @@
+@if (loggedIn){
+<app-navbar/>
+} @else {
+  <app-auth-nav/>
+}
+
+
+<router-outlet></router-outlet>
+
+  @if (loggedIn){
+    <app-footer/>
+  } @else {
+    <app-auth-footer/>
+  }

@@ -1,0 +1,356 @@
+@keyframes typing {
+    0%{content: ""}
+    2%{content: "D"; }
+    3%{content: "De"; }
+    4%{content: "Des"; }
+    5%{content: "Desi"; }
+    6%{content: "Desig"; }
+    7%{content: "Design";  }
+    8%{content: "Designe"; }
+    9%{content: "Designer"; border-color: white;}
+    10%{content: "Designer"; border-color:transparent ;}
+    11%{content: "Designer"; border-color: transparent;}
+    12%{content: "Designer"; border-color: white;}
+    13%{content: "Designer"; border-color: white;}
+    14%{content: "Designer"; border-color: transparent;}
+    15%{content: "Designer"; border-color: transparent;}
+    16%{content: "Designer"; border-color: white;}
+    17%{content: "Designer";}
+    18%{content: "Designe";}
+    19%{content: "Design";}
+    20%{content: "Desig";}
+    21%{content: "Desi";}
+    22%{content: "Des";}
+    23%{content: "De";}
+    24%{content: "Dev";}
+    25%{content: "Deve";}
+    26%{content: "Devel";}
+    26%{content: "Develo"; }
+    27%{content: "Develop"; }
+    28%{content: "Develope"; }
+    29%{content: "Developer"; border-color: white;}
+    30%{content: "Developer"; border-color: white;}
+    31%{content: "Developer"; border-color: transparent;}
+    32%{content: "Developer"; border-color: transparent;}
+    33%{content: "Developer"; border-color: white;}
+    34%{content: "Developer"; border-color: white;}
+    35%{content: "Developer"; border-color: transparent;}
+    36%{content: "Develope"; }
+    37%{content: "Develop"; }
+    38%{content: "Develo";}
+    39%{content: "Devel";}
+    40%{content: "Deve";}
+    41%{content: "Dev";}
+    42%{content: "De";}
+    43%{content: "D";}
+    44%{content: "";}
+    45%{content: "F";}
+    46%{content: "Fr";}
+    47%{content: "Fre";}
+    48%{content: "Free";}
+    49%{content: "Freel";}
+    50%{content: "Freela";}
+    51%{content: "Freelan";}
+    52%{content: "Freelanc"; }
+    53%{content: "Freelance"; }
+    54%{content: "Freelancer"; border-color: white;}
+    55%{content: "Freelancer"; border-color: white;}
+    56%{content: "Freelancer"; border-color: transparent;}
+    57%{content: "Freelancer"; border-color: transparent;}
+    58%{content: "Freelancer"; border-color: white;}
+    59%{content: "Freelancer"; border-color: white;}
+    60%{content: "Freelancer"; border-color: transparent;}
+    61%{content: "Freelancer"; border-color: transparent;}
+    62%{content: "Freelancer"; border-color: white;}
+    63%{content: "Freelance";}
+    64%{content: "Freelanc";}
+    65%{content: "Freelan";}
+    66%{content: "Freela";}
+    67%{content: "Freel";}
+    68%{content: "Free";}
+    69%{content: "Fre";}
+    70%{content: "Fr";}
+    71%{content: "F";}
+    72%{content: "";}
+    73%{content: "P";}
+    74%{content: "Ph";}
+    75%{content: "Pho";}
+    76%{content: "Phot";}
+    77%{content: "Photo";}
+    78%{content: "Photog";}
+    79%{content: "Photogr";}
+    80%{content: "Photogra"; }
+    81%{content: "Photograp"; }
+    82%{content: "Photograph";}
+    83%{content: "Photographe";}
+    84%{content: "Photographer"; border-color: white;}
+    85%{content: "Photographer"; border-color: transparent;}
+    86%{content: "Photographer"; border-color: transparent;}
+    87%{content: "Photographer"; border-color: white;}
+    88%{content: "Photographer"; border-color: white;}
+    89%{content: "Photographer"; border-color: transparent;}
+    90%{content: "Photographer";}
+    91%{content: "Photographe";}
+    92%{content: "Photograph";}
+    93%{content: "Photograp";}
+    94%{content: "Photogra";}
+    95%{content: "Photogr";}
+    96%{content: "Photog";}
+    97%{content: "Photo";}
+    98%{content: "Ph";}
+    99%{content: "P";}
+    100%{content: "";}
+}
+
+@keyframes counter1 {
+    0%{content: "1"}
+    2%{content: "2"; }
+    3%{content: "3"; }
+    4%{content: "4"; }
+    5%{content: "5"; }
+    6%{content: "5"; }
+    7%{content: "3";  }
+    8%{content: "3"; }
+    9%{content: "3";}
+    10%{content: "3";}
+    11%{content: "8";}
+    12%{content: "9";}
+    13%{content: "10";}
+    14%{content: "11";}
+    15%{content: "12";}
+    16%{content: "13";}
+    17%{content: "14";}
+    18%{content: "15";}
+    19%{content: "16";}
+    20%{content: "17";}
+    21%{content: "18";}
+    22%{content: "19";}
+    23%{content: "20";}
+    24%{content: "21";}
+    25%{content: "23";}
+    26%{content: "24";}
+    26%{content: "25"; }
+    27%{content: "26"; }
+    28%{content: "26"; ;}
+    29%{content: "27"; ;}
+    30%{content: "29"; }
+    31%{content: "36"; }
+    32%{content: "35"; }
+    33%{content: "35"; }
+    34%{content: "40"; }
+    35%{content: "45";}
+    36%{content: "46"; }
+    37%{content: "49"; }
+    38%{content: "60";}
+    39%{content: "67";}
+    40%{content: "68";}
+    41%{content: "70";}
+    42%{content: "80";}
+    43%{content: "90";}
+    44%{content: "100";}
+    45%{content: "120";}
+    46%{content: "139";}
+    47%{content: "148";}
+    48%{content: "158";}
+    49%{content: "167";}
+    50%{content: "179";}
+    51%{content: "186";}
+    52%{content: "190"; }
+    53%{content: "200"; }
+    54%{content: "210";}
+    55%{content: "224"; }
+    56%{content: "250"; }
+    57%{content: "266"; }
+    58%{content: "279"; }
+    59%{content: "297"; }
+    60%{content: "315"; }
+    61%{content: "324";}
+    62%{content: "328";}
+    63%{content: "332";}
+    64%{content: "336";}
+    65%{content: "347";}
+    67%{content: "358";}
+    69%{content: "359";}
+    70%{content: "360";}
+    72%{content: "371";}
+    75%{content: "382";}
+    78%{content: "393";}
+    80%{content: "394";}
+    83%{content: "406";}
+    85%{content: "417";}
+    86%{content: "428";}
+    88%{content: "439";}
+    90%{content: "445";}
+    92%{content: "446";}
+    94%{content: "447"; }
+    96%{content: "448";}
+    98%{content: "445"; }
+    100%{content: "450";}
+}
+
+@keyframes counter2 {
+    0%{content: "0"}
+    8%{content: "1"; }
+    16%{content: "2"; }
+    24%{content: "3"; }
+    30%{content: "4"; }
+    35%{content: "5"; }
+    38%{content: "6";  }
+    40%{content: "7"; }
+    43%{content: "8";}
+    45%{content: "9";}
+    47%{content: "10";}
+    49%{content: "11";}
+    51%{content: "12";}
+    53%{content: "13";}
+    59%{content: "14";}
+    60%{content: "15";}
+    65%{content: "16";}
+    69%{content: "17";}
+    78%{content: "18";}
+    80%{content: "19";}
+    85%{content: "20";}
+    90%{content: "21";}
+    93%{content: "23";}
+    96%{content: "24";}
+    100%{content: "25";}
+
+}
+
+@keyframes counter3 {
+    0%{content: "1"}
+    2%{content: "2"; }
+    3%{content: "3"; }
+    4%{content: "4"; }
+    5%{content: "5"; }
+    6%{content: "5"; }
+    7%{content: "3";  }
+    8%{content: "3"; }
+    9%{content: "3";}
+    10%{content: "3";}
+    11%{content: "8";}
+    12%{content: "9";}
+    13%{content: "10";}
+    14%{content: "11";}
+    15%{content: "12";}
+    16%{content: "13";}
+    17%{content: "14";}
+    18%{content: "15";}
+    19%{content: "16";}
+    20%{content: "17";}
+    21%{content: "18";}
+    22%{content: "19";}
+    23%{content: "20";}
+    24%{content: "21";}
+    25%{content: "23";}
+    26%{content: "24";}
+    26%{content: "25"; }
+    27%{content: "26"; }
+    28%{content: "26"; ;}
+    29%{content: "27"; ;}
+    30%{content: "29"; }
+    31%{content: "36"; }
+    32%{content: "35"; }
+    33%{content: "35"; }
+    34%{content: "40"; }
+    35%{content: "45";}
+    36%{content: "46"; }
+    37%{content: "49"; }
+    38%{content: "60";}
+    39%{content: "67";}
+    40%{content: "68";}
+    41%{content: "70";}
+    42%{content: "80";}
+    43%{content: "90";}
+    44%{content: "100";}
+    45%{content: "120";}
+    46%{content: "139";}
+    47%{content: "148";}
+    48%{content: "158";}
+    49%{content: "167";}
+    50%{content: "179";}
+    51%{content: "186";}
+    52%{content: "190"; }
+    53%{content: "200"; }
+    54%{content: "210";}
+    55%{content: "224"; }
+    56%{content: "250"; }
+    57%{content: "266"; }
+    58%{content: "279"; }
+    59%{content: "297"; }
+    60%{content: "315"; }
+    61%{content: "324";}
+    62%{content: "328";}
+    63%{content: "332";}
+    64%{content: "336";}
+    65%{content: "347";}
+    67%{content: "358";}
+    69%{content: "359";}
+    70%{content: "360";}
+    72%{content: "371";}
+    75%{content: "482";}
+    78%{content: "493";}
+    80%{content: "494";}
+    83%{content: "506";}
+    85%{content: "517";}
+    86%{content: "528";}
+    88%{content: "539";}
+    90%{content: "545";}
+    92%{content: "544";}
+    94%{content: "547"; }
+    96%{content: "548";}
+    98%{content: "545"; }
+    100%{content: "550";}
+}
+
+
+@keyframes counter4 {
+    0%{content: "0"; }
+    5%{content: "1"; }
+    8%{content: "2"; }
+    10%{content: "3"; }
+    12%{content: "4"; }
+    14%{content: "5";  }
+    16%{content: "6"; }
+    18%{content: "7";}
+    20%{content: "8";}
+    22%{content: "9";}
+    24%{content: "10";}
+    26%{content: "11";}
+    28%{content: "13";}
+    30%{content: "14";}
+    33%{content: "15";}
+    35%{content: "16";}
+    38%{content: "17";}
+    40%{content: "18";}
+    43%{content: "19";}
+    45%{content: "20";}
+    48%{content: "21";}
+    50%{content: "22";}
+    53%{content: "23";}
+    55%{content: "24";}
+    58%{content: "25";}
+    60%{content: "26"; }
+    63%{content: "27"; }
+    65%{content: "28"; ;}
+    68%{content: "29"; ;}
+    70%{content: "30"; }
+    73%{content: "31"; }
+    75%{content: "32"; }
+    78%{content: "33"; }
+    80%{content: "34"; }
+    82%{content: "35";}
+    84%{content: "36"; }
+    86%{content: "37"; }
+    88%{content: "38";}
+    90%{content: "39";}
+    92%{content: "40";}
+    93%{content: "41";}
+    94%{content: "42";}
+    95%{content: "43";}
+    96%{content: "44";}
+    97%{content: "45";}
+    98%{content: "46";}
+    99%{content: "47";}
+    100%{content: "48";}
+}

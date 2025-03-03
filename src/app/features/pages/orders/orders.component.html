@@ -1,0 +1,56 @@
+<section class="bg-gray-300/20 py-24 flex flex-col justify-center items-center gap-8 "
+
+  >
+  @if (orders){
+    @for (order of orders; track order.id) {
+      <div class="bg-white order sm:w-[500px] w-[95%] rounded-2xl overflow-hidden h-96 shadow-xl flex flex-col justify-between">
+        <div class="order__header border-b px-4 py-3  flex justify-between items-center">
+          <ul class=" text-lg">
+            <li>City: {{ order.shippingAddress?order.shippingAddress.city:'' }}</li>
+            <li>Phone: {{ order.shippingAddress?order.shippingAddress.phone:'' }}</li>
+          </ul>
+          <p
+            class="p-2 rounded-lg text-lg  uppercase"
+            [class]="order.isDelivered?'bg-teal-500  ':'bg-yellow-400'"
+          >{{order.isDelivered?'delivered': 'On The Way'}}</p>
+        </div>
+        <div class="order__body px-4 overflow-auto space-y-4 my-4">
+            @for (product  of order.cartItems; track $index) {
+              <div class="flex gap-4  relative border-t border-b">
+                <figure class="w-[80px] h-[100px]">
+                  <img [src]="product.product.imageCover" class="h-full w-full object-cover" alt="titel">
+                </figure>
+                <div class="order__body__title text-lg mt-2 ">
+                  <p  class="text-hover cursor-pointer" (click)="ShowDialog(product.product.id)">{{product.product.title.split(' ').slice(0,2).join(' ')}}</p>
+                  <p class="text-sm">Count: {{product.count}}</p>
+                  <p  class="text-sm">Price: {{product.price | currency: 'EGY'}}</p>
+                </div>
+
+                <button class="absolute top-4 right-4 text-2xl text-hover" (click)="ShowDialog(product.product.id)"><i class="fa-light fa-magnifying-glass"></i></button>
+              </div>
+            }
+
+        </div>
+        <div class="order__footer px-4 py-3 text-lg text-black  border-t  flex justify-between items-end">
+          <ul>
+            <li>Total Price: {{ order.totalOrderPrice | currency: 'EGY' }}</li>
+            <li>payment Method: {{order.paymentMethodType}}</li>
+          </ul>
+          <ul>
+            <li class="capitalize text-sm">Paid: {{order.isPaid?'yes' : 'No'}}</li>
+            <li  class="text-sm">{{order.createdAt | date}}<li>
+          </ul>
+
+        </div>
+      </div>
+    }
+
+  } @else {
+    <app-loading-product/>
+    <app-loading-product/>
+    <app-loading-product/>
+    <app-loading-product/>
+    <app-loading-product/>
+  }
+</section>
+<app-product-dialog [show]="showDialog" [productId]="DialogProduct" (closeDialog)="CloseDialog($event)"/>

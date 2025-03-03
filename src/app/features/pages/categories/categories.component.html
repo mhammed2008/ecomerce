@@ -1,0 +1,37 @@
+<div class="relative flex">
+
+  <div
+    [ngClass]="{
+    'bg-white w-[300px] absolute -left-full z-10  top-0 h-[100vh] overflow-auto shadow-xl transition-all duration-500 p-4':true,
+    '!left-0': showFilter
+    }"
+
+  >
+    <h3 class="text-xl mb-4 font-medium">Select product category</h3>
+    <ul class="space-y-4 ">
+      @for ( category of categories ; track $index) {
+        <li class="text-hover">
+          <input class="mr-4" type="checkbox" (click)="choseByCategory(category._id)"  [name]="category.slug" [id]="category.slug">
+          <label [for]="category.slug">{{category.name}}</label>
+        </li>
+      }
+    </ul>
+    @if (subCategories.length >0) {
+      <h3 class="text-xl my-8 font-medium">Select product Tag</h3>
+      <ul class="space-y-4  py-8">
+        @for ( subCategory of subCategories ; track $index) {
+          <li class="text-hover">
+            <input class="mr-4" type="checkbox" [name]="subCategory" (click)="choseBySubCategory(subCategory._id)" [id]="subCategory.slug">
+            <label [for]="subCategory.slug">{{subCategory.name}}</label>
+          </li>
+        }
+      </ul>
+    }
+    <button class="absolute right-4 text-3xl top-4" (click)="showFilter=false"><i class="fa-solid fa-xmark"></i></button>
+
+  </div>
+  <button class="absolute top-16 left-12 text-3xl sm:top-4 z- " (click)="showFilter=true"><i class="fa-solid fa-filter"></i></button>
+  <div class="overflow-hidden mx-auto">
+  <app-products-for-loop [products]="products"/>
+  </div>
+</div>

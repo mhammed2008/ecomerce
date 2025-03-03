@@ -1,0 +1,93 @@
+<section class="my-20 flex justify-center items-center">
+  <div class="w-[80%]">
+    <header>
+      <h2 class="text-center mb-7">
+        <span class="bg-main text-3xl p-2 rounded-xl text-white">Payment Details</span>
+      </h2>
+    </header>
+
+    <form [formGroup]="checkOutForm" (ngSubmit)="checkOut(submitType)">
+      <div class="mb-5">
+        @let city = checkOutForm.controls['city'] ;
+        <div class="relative z-0 w-full group">
+          <input type="text" name="city" formControlName="city" id="city" class="input peer" placeholder=" " required/>
+          <label for="city"
+                 class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-black peer-focus:dark:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">City
+            Address</label>
+        </div>
+        @if (city.errors && city.touched){
+          <p class="text-red-600 mt-2 pl-2">this filed is required</p>
+        }
+      </div>
+      <div class="mb-5">
+        @let phone = checkOutForm.controls['phone'] ;
+        <div class="relative z-0 w-full  group">
+          <input type="tel" formControlName="phone" name="phone" id="phone" class="input peer" placeholder=" " required/>
+          <label for="phone"
+                 class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-4 scale-75 top-2 z-10 origin-[0] bg-white dark:bg-gray-900 px-2 peer-focus:px-2 peer-focus:text-black peer-focus:dark:text-white peer-placeholder-shown:scale-100 peer-placeholder-shown:-translate-y-1/2 peer-placeholder-shown:top-1/2 peer-focus:top-2 peer-focus:scale-75 peer-focus:-translate-y-4 rtl:peer-focus:translate-x-1/4 rtl:peer-focus:left-auto start-1">Phone
+            Address</label>
+
+        </div>
+        @if (phone.errors && phone.touched){
+          <p class="text-red-600 mt-2 pl-2">{{ phone.errors['pattern']? 'the phone number is not valid' : 'this filed is required' }}</p>
+        }
+      </div>
+
+      <div class="relative z-0 w-full mb-5 group">
+        @let details = checkOutForm.controls['details'] ;
+        <label for="details" class="block mb-2 text-sm font-medium text-gray-900 ">Details Address</label>
+        <textarea rows="4" formControlName="details" name="details" id="details"
+                  class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:text-main  focus:border-main "
+        ></textarea>
+        @if (details.touched && details.errors){
+          <p class="text-red-600 mt-2 pl-2">{{ details.errors['minLength']? 'invalid details Pleas porvide more then 5 chere' : 'this filed is required' }}</p>
+        }
+      </div>
+
+      <div class="flex justify-between items-center">
+        <div class="cart__actions   ">
+          <button #checkOutBtn (click)="submitType = 'checkOut' "
+            class="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-teal-500 rounded-md group   ">
+            <span
+              class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-teal-600 rounded group-hover:-mr-4 group-hover:-mt-4">
+              <span
+                class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+            </span>
+            <span class="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-teal-600  rounded group-hover:-ml-4 group-hover:-mb-4">
+              <span
+          class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span></span>
+            <span
+              class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-teal-600  rounded-md group-hover:translate-x-0"></span>
+            <span
+              class="relative w-full  text-white transition-colors duration-200 ease-in-out group-hover:text-white text-center group-disabled:hidden ">Cash Payment</span>
+            <span
+              class="relative w-full  text-white transition-colors duration-200 ease-in-out group-hover:text-white text-center group-disabled:block hidden  "><i class="fa-solid fa-spinner-scale fa-spin"></i></span>
+          </button>
+        </div>
+        <div class="cart__actions   ">
+          <button #checkOnlineBtn (click)="submitType = 'online' "
+            class="relative flex items-center px-6 py-3 overflow-hidden font-medium transition-all bg-teal-500 rounded-md group   ">
+            <span
+        class="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-teal-600 rounded group-hover:-mr-4 group-hover:-mt-4">
+        <span
+          class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+      </span>
+            <span
+              class="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-teal-600  rounded group-hover:-ml-4 group-hover:-mb-4">
+        <span
+          class="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"
+        ></span>
+      </span>
+            <span
+              class="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-teal-600 rounded-md group-hover:translate-x-0"
+            ></span>
+
+            <span class="relative w-full  text-white transition-colors duration-200 ease-in-out group-hover:text-white text-center group-disabled:hidden ">Online Payment</span>
+            <span
+              class="relative w-full  text-white transition-colors duration-200 ease-in-out group-hover:text-white text-center group-disabled:block hidden  "><i class="fa-solid fa-spinner-scale fa-spin"></i></span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
