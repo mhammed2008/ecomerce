@@ -4,11 +4,16 @@
   <!-- Carousel wrapper -->
   <div class="relative h-56 overflow-hidden rounded-lg md:h-[500px]">
 
-    @for (src of images ; track $index){
-      <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-        <img [src]="src" class="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img src="./images/slider-image-1.jpeg" class="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
       </div>
-    }
+      <div class="hidden duration-700 ease-in-out" data-carousel-item>
+        <img src="./images/slider-image-2.jpeg" class="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+      </div>
+      <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
+        <img src="./images/slider-image-2.jpeg" class="absolute object-cover block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+      </div>
+
 
   </div>
   <!-- Slider controls -->
