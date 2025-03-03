@@ -8,9 +8,9 @@ import {Component} from '@angular/core';
 })
 export class HeaderComponent{
   images:string[]=[
-    './images/slider-image-1.jpeg',
-    './images/slider-image-2.jpeg',
-    './images/slider-image-3.jpeg'
+    'https://ecomerce-sepia.vercel.app/images/slider-image-1.jpeg',
+    'https://ecomerce-sepia.vercel.app/images/slider-image-2.jpeg',
+    'https://ecomerce-sepia.vercel.app/images/slider-image-3.jpeg'
   ]
 
 }
