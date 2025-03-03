@@ -16,8 +16,8 @@ import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 })
 export class LoginComponent {
   loginForm: FormGroup = new FormGroup({
-    email: new FormControl('test@test.ts', [Validators.required,Validators.email]),
-    password: new FormControl('Password', [Validators.required, Validators.pattern('(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}')]),
+    email: new FormControl('', [Validators.required,Validators.email]),
+    password: new FormControl('', [Validators.required, Validators.pattern('(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}')]),
   });
 
   private _authService=inject(AuthService);

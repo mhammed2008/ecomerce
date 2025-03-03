@@ -18,7 +18,7 @@ import {takeUntilDestroyed} from '@angular/core/rxjs-interop';
 })
 export class ForgetPasswordComponent {
   step1ForgetPasswordForm: FormGroup = new FormGroup({
-    email: new FormControl('mohammedarduino7@gmail.com', [Validators.required,Validators.email]),
+    email: new FormControl('', [Validators.required,Validators.email]),
   });
   step2VerifyResetCodeForm: FormGroup = new FormGroup({
     resetCode: new FormControl('', [Validators.required,Validators.pattern('[0-9]{5,6}')]),
