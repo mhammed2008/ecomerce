@@ -35,5 +35,5 @@ export const routes: Routes = [
   { path: 'checkOut/:cartId', canActivate:[authGuard], component:CheckOutComponent  ,title:'CheckOut'},
   { path: 'allorders', canActivate:[authGuard],  component:OrdersComponent,title:'Orders'},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-  {path: '**', component: NotFoundComponent,title:'Not Found' },
+  { path: '**', component: NotFoundComponent,title:'Not Found' },
 ];
